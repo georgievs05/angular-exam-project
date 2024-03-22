@@ -1,0 +1,83 @@
+article:first-child{
+    text-align: center;
+    background-image: url('https://www.lystloc.com/blog/wp-content/uploads/2023/06/A-Brief-Guide-On-Soft-Selling-And-Its-Techniques-1.webp');
+    background-repeat: no-repeat;
+    background-position:top;
+    padding-bottom: 190px;
+    padding-top: 30px;
+}
+
+
+.discr{
+    text-align:left;
+    margin-top: 160px;
+    margin-left: 40px;
+    font-size: 25px;
+   color: white ;
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
+    line-height: 60px;
+    background-color: rgba(65, 65, 65, 0.719);
+    
+}
+
+.title{
+    font-size: 35px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    color: white;
+    background-color:rgba(65, 65, 65, 0.719) ;
+    margin-left: 500px;
+    margin-right: 500px;
+    border-radius: 15px;
+}
+
+.wrapper{
+    display: flex;
+}
+
+.sell{
+    margin-left: 250px;
+    margin-top: 160px;
+    display:inline-block;
+    justify-content: space-evenly;
+    background-color:rgba(65, 65, 65, 0.719) ;
+    padding: 40px 40px 40px 40px;
+    border-radius: 15px;
+}
+
+.sell a{
+    text-decoration: none;
+    background-color: rgb(216, 187, 84);
+    color: black;
+    padding: 20px 20px 20px 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.sell a:hover{
+    background-color: black;
+    color:rgb(216, 187, 84);
+}
+
+.sell h1{
+    color: white;
+    font-size: 30px;
+}
+
+.btn{
+    margin-top: 100px
+}
+
+.text{
+    text-align: center;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    background-color:rgb(119, 119, 119) ;
+    height: 300px;
+}

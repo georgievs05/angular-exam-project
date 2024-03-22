@@ -4,4 +4,7 @@ footer{
     justify-content: space-evenly;
     background-color: rgb(65, 65, 65);
     color:  rgb(216, 187, 84);
+    /* /* bottom: 0; */
+    /* position:absolute ; */ 
+    width: 100%;
 }
