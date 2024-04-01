@@ -1,0 +1,19 @@
+div{
+    text-align: center;
+    display:block;
+    height: 730px;
+    padding-top: 200px;
+}
+
+h1{
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+a{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    padding: 20px 20px 20px 20px;
+}

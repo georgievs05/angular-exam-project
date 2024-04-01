@@ -10,20 +10,24 @@ import { HomeComponent } from './home/home.component';
 import { AddItemComponent } from './item/add-item/add-item.component';
 import { UserModule } from './user/user.module';
 import { ItemModule } from './item/item.module';
+import { ErrorComponent } from './error/error.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     HomeComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     CoreModule,
+    HttpClientModule,
     SharedModule,
     UserModule,
-    ItemModule
+    ItemModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

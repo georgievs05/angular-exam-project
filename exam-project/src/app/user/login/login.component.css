@@ -82,3 +82,8 @@
     background-size: 100%;
     position:static
 }
+
+.error{
+    color: red;
+    font-weight: bold;
+}

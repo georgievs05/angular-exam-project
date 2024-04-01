@@ -1,16 +1,33 @@
 <header>
 
-    <h1>TradeTrove</h1>
 
+    <div class="logo">
+        <h1 routerLink="/home">TradeTrove</h1>
+        <img routerLink="/home" src="assets/pngwing.com-4.png" alt="no img">
+    </div>
+   
+
+    <div class="nav">
 
     <nav>
         <a routerLink="/home">Home</a>
+    </nav>
+
+    <nav *ngIf="isLoggedIn" >
         <a routerLink="/listings">View listings</a>
         <a routerLink="/add-item">Add item</a>
-        <a routerLink="/profile">Profile</a>
+        <a routerLink="/profile">{{firstName}}'sProfile</a>
+        <a (click)="logout()">Logout</a>
+    </nav>
+
+    <nav *ngIf="!isLoggedIn">
         <a routerLink="/login">Login</a>
         <a routerLink="/register">Register</a>
     </nav>
+    </div>
+
+
+
 </header>
 
 

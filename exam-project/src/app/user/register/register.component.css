@@ -5,7 +5,7 @@
     margin-top: 160px;
 }
 
-.login {
+.register {
     width: 400px;
     padding: 30px;
     border: 1px solid #ffffff;
@@ -13,24 +13,25 @@
     background-color: rgba(255, 255, 255, 0.571)
 }
 
-.login h2 {
+.register h2 {
     text-align: center;
     margin-bottom: 30px;
     font-size: 24px;
 }
 
-.login p {
+.register p {
     margin-bottom: 20px;
 }
 
-.login label {
+.register label {
     display: block;
     margin-bottom: 10px;
     font-size: 18px;
 }
 
-.login input[type="email"],
-.login input[type="password"] {
+.register input[type="email"],
+.register input[type="password"],
+.register input[type='text'] {
     width: 100%;
     padding: 15px;
     font-size: 16px;
@@ -39,7 +40,7 @@
     box-sizing: border-box;
 }
 
-.login button {
+.register button {
     width: 100%;
     padding: 15px;
     font-size: 18px;
@@ -50,7 +51,7 @@
     cursor: pointer;
 }
 
-.login button:disabled {
+.register button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
 }
@@ -70,9 +71,6 @@
     text-decoration: underline;
 }
 
-.input-error {
-    border-color: #dc3545 !important;
-}
 
 .backround{
     background-image: url('https://static.vecteezy.com/system/resources/previews/002/167/628/non_2x/bargain-business-deal-for-buyer-and-seller-best-price-shopping-stock-for-investor-or-consumer-and-marketing-concept-dollar-gold-coins-in-shopping-cart-or-trolley-in-businessman-hand-vector.jpg');
@@ -80,4 +78,9 @@
     background-position:top;
     padding: 20px 20px 80px 20px;
     background-size: 100%;
+}
+
+.error{
+    color: red;
+    font-weight: bold;
 }

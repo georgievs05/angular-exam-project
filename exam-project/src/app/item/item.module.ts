@@ -11,7 +11,7 @@ import { AddItemComponent } from './add-item/add-item.component';
   declarations: [
     CurrentItemComponent,
     ListingsComponent,
-    AddItemComponent
+    AddItemComponent,
   ],
   imports: [
     CommonModule,ItemRoutingModule
