@@ -59,3 +59,13 @@
     width: 100%;
     font-size: 1.2em;
   }
+
+  .btn.btn.submit:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.error{
+  color: red;
+  font-weight: bold;
+}

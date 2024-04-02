@@ -4,6 +4,7 @@ import { CurrentItemComponent } from './current-item/current-item.component';
 import { ItemRoutingModule } from './item-routing.module';
 import { ListingsComponent } from './listings/listings.component';
 import { AddItemComponent } from './add-item/add-item.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -14,7 +15,7 @@ import { AddItemComponent } from './add-item/add-item.component';
     AddItemComponent,
   ],
   imports: [
-    CommonModule,ItemRoutingModule
+    CommonModule,ItemRoutingModule,FormsModule
   ]
 })
 export class ItemModule { }

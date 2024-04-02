@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ApiService } from 'src/app/api.service';
 
 @Component({
@@ -10,13 +11,12 @@ export class AddItemComponent {
 
   constructor(private apiService:ApiService){}
 
-  addItem(ev:Event, title:string,text:string,imageUrl:string,price:string){
-    ev.preventDefault();
+  addTheme(form: NgForm) {
+    if (form.invalid) {
+      return;
+    }
 
-    
-    this.apiService.createItem(title,text,imageUrl,price).subscribe(data =>{
-      console.log({data})
-    })
+    console.log(form.value);
 
   }
 }

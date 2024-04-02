@@ -16,7 +16,7 @@
     <nav *ngIf="isLoggedIn" >
         <a routerLink="/listings">View listings</a>
         <a routerLink="/add-item">Add item</a>
-        <a routerLink="/profile">{{firstName}}'sProfile</a>
+        <a routerLink="/profile">{{username}}'sProfile</a>
         <a (click)="logout()">Logout</a>
     </nav>
 
