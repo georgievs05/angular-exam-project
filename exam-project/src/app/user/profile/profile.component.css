@@ -1,0 +1,71 @@
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+  
+  /* Styles for profile section */
+  .profile {
+    display: flex;
+    align-items: center;
+}
+  
+  .cont {
+    flex: 1;
+    font-size: 25px;
+}
+  
+  .profile img {
+    width: 150px; /* Adjust as needed */
+    height: auto;
+    margin-left: 20px;
+    border-radius: 15px;
+  }
+  
+  /* Styles for container2 */
+  .container2 {
+    margin-top: 20px;
+  }
+  
+  .listings{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns with equal width */
+    gap: 30px; 
+    margin: 20px 20px 80px 20px;
+    
+}
+
+.listings section{
+    background-color: rgb(216, 187, 84);
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    padding: 20px 20px 20px 20px;
+    border-radius: 15px;
+    max-width: 500px;
+    max-height: 500px;
+}
+.listings img {
+    max-width: 50%; /* Limit the size of the image */
+    height: auto;
+    border-radius: 15px;
+  }
+  
+.listings div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .listings section div{
+    display: flex;
+    flex-direction: column;
+  }
+
+.listings section div a{
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(65, 65, 65);
+    color: rgb(216, 187, 84);
+    border-radius: 15px;
+}

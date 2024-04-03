@@ -1,1 +1,52 @@
-<p>profile works!</p>
+<div class="container">
+
+    <div>
+        <h1>Profile</h1>
+    </div>
+
+  
+
+  <div class="profile">
+    <div class="cont">
+        <p>Username:  {{profileDetails.username}}</p>
+        <p>email:  {{profileDetails.email}}</p>
+        <p>Phone Number:  {{profileDetails.tel}}</p> 
+    </div>
+    
+    <div>
+        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="">
+    </div>
+  </div>
+
+  <div class="container2">
+
+    <h1 *ngIf="items?.length==0; else hasitems">You still don't have items listed!</h1>
+    <ng-template #hasitems>
+        <h1>My Items</h1>
+    </ng-template>
+
+
+    <div class="listings">
+        <section *ngFor="let item of items">
+            <div>
+                <h2>{{item.title}}</h2>
+
+                <img src={{item.image}} alt="">
+            </div>
+            
+
+            <div>
+                <a routerLink="/listings/{{item._id}}" >View</a>
+
+                <p>Price:{{item.price}} {{item.currency}}</p>
+            </div>
+            
+
+        </section>
+
+    </div>
+</div>
+
+
+</div>
+

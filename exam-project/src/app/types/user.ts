@@ -15,5 +15,12 @@ export interface UserForAuth{
     email:string;
     tel:string;
     password:string;
-    id:string
+    _id:string
 }
+
+export interface ProfileDetails {
+    username: string;
+    email: string;
+    tel: string;
+    _id:string
+  }

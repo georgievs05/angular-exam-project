@@ -1,4 +1,4 @@
-const { themeModel } = require('../models');
+const { themeModel,userModel } = require('../models');
 const { newPost } = require('./postController')
 
 function getThemes(req, res, next) {
@@ -23,16 +23,53 @@ function getTheme(req, res, next) {
 }
 
 function createTheme(req, res, next) {
-    const { themeName, postText } = req.body;
+    const { title, text,image,price,currency } = req.body;
     const { _id: userId } = req.user;
 
-    themeModel.create({ themeName, userId, subscribers: [userId] })
-        .then(theme => {
-            newPost(postText, userId, theme._id)
-                .then(([_, updatedTheme]) => res.status(200).json(updatedTheme))
+    themeModel.create({ title,text,image,price,currency, userId, subscribers: [userId] })
+        // .then(theme => {
+        //     newPost(postText, userId, theme._id)
+        //         .then(([_, updatedTheme]) => res.status(200).json(updatedTheme))
+        // })
+        .catch(next);
+}
+
+function editTheme(req, res, next) {
+    const { themeId } = req.params;
+    const { title, text,image,price,currency } = req.body;
+    const { _id: userId } = req.user;
+
+    // if the userId is not the same as this one of the post, the post will not be updated
+    themeModel.findOneAndUpdate({ _id: themeId, userId },{title:title, text: text ,image:image,price:price,currency:currency}, { new: true })
+        .then(updatedTheme => {
+            if (updatedTheme) {
+                res.status(200).json(updatedTheme);
+            }
+            else {
+                res.status(401).json({ message: `Not allowed!` });
+            }
         })
         .catch(next);
 }
+
+function deleteTheme(req, res, next) {
+    const { themeId } = req.params;
+    const { _id: userId } = req.user;
+
+    Promise.all([
+        themeModel.findOneAndDelete({ _id: themeId, userId }),
+        userModel.findOneAndUpdate({ _id: userId }, { $pull: { themes: themeId } }),
+    ])
+        .then(([deletedOne, _, __]) => {
+            if (deletedOne) {
+                res.status(200).json(deletedOne)
+            } else {
+                res.status(401).json({ message: `Not allowed!` });
+            }
+        })
+        .catch(next);
+}
+
 
 function subscribe(req, res, next) {
     const themeId = req.params.themeId;
@@ -49,4 +86,6 @@ module.exports = {
     createTheme,
     getTheme,
     subscribe,
+    editTheme,
+    deleteTheme
 }

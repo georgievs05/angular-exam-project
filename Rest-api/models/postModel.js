@@ -2,15 +2,9 @@ const mongoose = require('mongoose');
 const { ObjectId } = mongoose.Schema.Types;
 
 const postSchema = new mongoose.Schema({
-    title:{
-        type:String
-    },
     text: {
         type: String,
         required: true
-    },
-    imageUrl:{
-      type:String
     },
     likes: [{
         type: ObjectId,
@@ -19,6 +13,10 @@ const postSchema = new mongoose.Schema({
     userId: {
         type: ObjectId,
         ref: "User"
+    },
+    themeId: {
+        type: ObjectId,
+        ref: "Theme"
     },
 }, { timestamps: { createdAt: 'created_at' } });
 

@@ -1,10 +1,11 @@
-article:first-child{
+.firstArticle{
     text-align: center;
     background-image: url('https://www.lystloc.com/blog/wp-content/uploads/2023/06/A-Brief-Guide-On-Soft-Selling-And-Its-Techniques-1.webp');
     background-repeat: no-repeat;
     background-position:top;
     padding-bottom: 190px;
     padding-top: 30px;
+
 }
 
 
@@ -71,13 +72,34 @@ article:first-child{
 .btn{
     margin-top: 100px
 }
-
+.separator{
+    background-color: black;
+    height: 20px;
+}
 .text{
     text-align: center;
     padding-top: 40px;
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 40px;
-    background-color:rgb(119, 119, 119) ;
+    background-color:rgb(255, 255, 255) ;
     height: 300px;
+
 }
+
+.text div{
+    display: flex;
+    justify-content: space-evenly;
+   
+}
+
+.text div p{
+    background-color: rgb(216, 187, 84);
+    max-width: 1400px;
+    border-radius: 15px;
+    padding: 10px 10px 10px 10px ;
+}
+
+
+
+

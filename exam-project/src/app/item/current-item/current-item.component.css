@@ -9,12 +9,31 @@ h1{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    background-image:url('../../../assets/bgrnd.jpg');
+    background-repeat: no-repeat;
+    background-position:center;
 }
 
 .container2{
+    margin-top: 40px;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
+}
 
+.container4 a{
+    background-color: orange;
+    margin-bottom: 100px;
+    margin-right: 50px;
+    text-decoration: none;
+    padding: 10px 10px 10px 10px;
+    border-radius: 15px;
+
+}
+
+.container4{
+    display: flex;
+    justify-content:space-between;
+    flex-direction: row;
 }
 
 
@@ -25,10 +44,15 @@ p{
     margin-top: 150px;
 }
 
-img{
+.img{
     background-color:rgb(216, 187, 84) ;
     padding: 40px 40px 40px 40px;
     border-radius: 15px;
     height: 500px;
     margin-bottom: 40px;
+}
+
+.image{
+    height: 430px;
+    border-radius: 15px
 }

@@ -1,0 +1,6 @@
+<form #form="ngForm" (ngSubmit)="deleteItem(form)">
+
+<h1>Are you sure you want to delete {{item.title}}?</h1>
+<button>Yes</button>
+<a routerLink="/listings">No</a>
+</form>

@@ -14,6 +14,7 @@ import { ErrorComponent } from './error/error.component';
 import { HttpClientModule } from '@angular/common/http';
 import { appInterceptorProvider } from './app.interceptor';
 import { AuthenticationComponent } from './authentication/authentication.component';
+import { SmthWentWrongComponent } from './smth-went-wrong/smth-went-wrong.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { AuthenticationComponent } from './authentication/authentication.compone
     HomeComponent,
     ErrorComponent,
     AuthenticationComponent,
+    SmthWentWrongComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,7 @@ import { AuthenticationComponent } from './authentication/authentication.compone
     ItemModule,
     AppRoutingModule
   ],
-  providers: [appInterceptorProvider],
+  providers:[appInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

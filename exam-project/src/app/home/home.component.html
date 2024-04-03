@@ -1,6 +1,9 @@
 
-
-<article>
+<div class="separator">
+    
+</div>
+<article class="firstArticle">
+   
     <p class="title">Welcome to Tradetrove – Your Gateway to Seamless Trading!</p>
 
 
@@ -12,7 +15,7 @@
         </p>
 
 
-        <div class="sell"> 
+        <div class="sell" *ngIf="!isLoggedIn"> 
         <h1>
             Start selling and buying now!
         </h1>
@@ -20,10 +23,17 @@
         <div class="btn">
             <a routerLink="/register">Register</a>
         </div>
-       
+        </div>
+
+        <div class="sell" *ngIf="isLoggedIn"> 
+            <h1>
+                Sell your items now!
+            </h1>
     
-    
-         </div>
+            <div class="btn">
+                <a routerLink="/add-item">Add item</a>
+            </div>
+            </div>
 
        
     </div>
@@ -31,16 +41,27 @@
 
 </article>
 
-
+<div class="separator">
+    .
+</div>
 <article class="text">
 
-    <p>Discover a world of endless possibilities with Tradetrove, the ultimate platform for buying, <br>
-        selling, and trading goods online. Whether you're searching for that perfect item or looking to <br>
-        declutter your space, Tradetrove offers a streamlined and secure marketplace where you can connect with<br>
-         buyers and sellers from around the globe. Explore our diverse range of listings, from electronics and <br>
-         fashion to home decor and collectibles. With our user-friendly interface and robust search features, <br>
-         finding exactly what you need has never been easier. Join our community of savvy traders today and unlock <br>
-         the potential of your possessions. Start browsing now and embark on your trading journey with Tradetrove!"<br>
-        
-        Feel free to customize this text to better fit the tone and style of your website and the preferences of your target audience.</p>
+    <div>
+        <p>Discover a world of endless possibilities with Tradetrove, the ultimate platform for buying, 
+            selling, and trading goods online. Whether you're searching for that perfect item or looking to
+            declutter your space, Tradetrove offers a streamlined and secure marketplace where you can connect with
+             buyers and sellers from around the globe. 
+
+             Explore our diverse range of listings, from electronics and 
+                fashion to home decor and collectibles.With our user-friendly interface and robust search features, 
+                finding exactly what you need has never been easier. Join our community of savvy traders today and unlock 
+                the potential of your possessions. Start browsing now and embark on your trading journey with Tradetrove!"</p>
+
+    </div>
 </article>
+
+
+<div class="separator">
+    .
+</div>
+

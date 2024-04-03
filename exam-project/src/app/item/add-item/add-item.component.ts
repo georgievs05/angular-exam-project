@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 
 @Component({
@@ -9,14 +10,22 @@ import { ApiService } from 'src/app/api.service';
 })
 export class AddItemComponent {
 
-  constructor(private apiService:ApiService){}
+  constructor(private apiService:ApiService, private router:Router){}
 
-  addTheme(form: NgForm) {
+  addItem(form: NgForm) {
     if (form.invalid) {
+      console.log('invalid')
       return;
+    }else{
+      const {title,text,image,price,currency} = form.value;
+      this.apiService.createItem(title,text,image,price,currency).subscribe({
+        next: ()=> this.router.navigate(['/listings'])
+      }
+      )
+      this.router.navigate(['/listings'])
     }
 
-    console.log(form.value);
-
+    
+   
   }
 }

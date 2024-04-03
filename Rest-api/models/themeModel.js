@@ -2,7 +2,23 @@ const mongoose = require('mongoose');
 const { ObjectId } = mongoose.Schema.Types;
 
 const themeSchema = new mongoose.Schema({
-    themeName: {
+    title: {
+        type: String,
+        required: true
+    },
+    text: {
+        type: String,
+        required: true
+    },
+    image: {
+        type: String,
+        required: true
+    },
+    price: {
+        type: String,
+        required: true
+    },
+    currency: {
         type: String,
         required: true
     },
@@ -21,3 +37,4 @@ const themeSchema = new mongoose.Schema({
 }, { timestamps: { createdAt: 'created_at' } });
 
 module.exports = mongoose.model('Theme', themeSchema);
+

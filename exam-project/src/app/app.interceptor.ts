@@ -1,12 +1,20 @@
 import { HTTP_INTERCEPTORS, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from "@angular/common/http";
 import { Injectable, Provider } from "@angular/core";
-import { Observable } from "rxjs";
+import { Observable, catchError } from "rxjs";
 import { environment } from "src/environments/environment.development";
+import { SmthWentWrongService } from "./smth-went-wrong/smth-went-wrong.service";
+import { Router } from "@angular/router";
 
 const {apiUrl} = environment
 
 @Injectable()
-class AppInterceptor implements HttpInterceptor{
+export class AppInterceptor implements HttpInterceptor{
+
+
+    constructor(private smthWentWrongService: SmthWentWrongService, private router: Router ){}
+
+
+
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
  
           
@@ -17,15 +25,26 @@ class AppInterceptor implements HttpInterceptor{
             });
         }
 
-        return next.handle(req)
+        return next.handle(req).pipe(
+            catchError((err)=>{
+               
+                
+                if(err.status === 401){
+                    this.smthWentWrongService.setError(err);
+                    this.router.navigate(['/smthwentwrong'])                
+                }else{
+                this.smthWentWrongService.setError(err);
+                this.router.navigate(['/smthwentwrong'])
+                }
+               return[err];
+            })
+        )
     }
 }
 
 
-export const appInterceptorProvider: Provider={
+export const appInterceptorProvider: Provider = {
     useClass: AppInterceptor,
-    multi:true,
+    multi: true,
     provide: HTTP_INTERCEPTORS,
-
-}
-
+};

@@ -190,7 +190,7 @@ Content:
         "subscribers": ["5f8580d25d1da62568dd38fd"],
         "posts": ["5f858dd2d895ad23602db9d5"],
         "_id": "5f858dd2d895ad23602db9d4",
-        "themeName": "Some Theme",
+        "title": "Some Theme",
         "userId": "5f8580d25d1da62568dd38fd",
         "created_at": "2020-10-13T11:21:54.863Z",
         "updatedAt": "2020-10-13T11:21:54.898Z",
@@ -221,14 +221,14 @@ Creates new Theme with the first post of the author and returns the theme as jso
 
 ```
 {
-    "themeName": "Some Theme Title",
+    "title": "Some Theme Title",
     "postText": "Some Post text"
 }
 ```
 
 Required:
 
-```themeName``` : [string] -- The Title of your new Theme, which you want to create
+```title``` : [string] -- The Title of your new Theme, which you want to create
 ```postText``` : [string] -- The text of your post. This post will be append as first comment on your Theme.
 
 ### Success Response:
@@ -241,7 +241,7 @@ Content:
     "subscribers": ["5f86c1f0a112c130e89964af"],
     "posts": ["5f86c38abfa44331a0ff0094"],
     "_id": "5f86c38abfa44331a0ff0093",
-    "themeName": "Some Theme Title",
+    "title": "Some Theme Title",
     "userId": "5f86c1f0a112c130e89964af",
     "created_at": "2020-10-14T09:23:22.102Z",
     "updatedAt": "2020-10-14T09:23:22.114Z",
@@ -288,7 +288,7 @@ Content:
     "5f85b2501141b13a04a9139d"
 ],
 "_id": "5f858dd2d895ad23602db9d4",
-"themeName": "Some Theme",
+"title": "Some Theme",
 "userId": "5f8580d25d1da62568dd38fd",
 "created_at": "2020-10-13T11:21:54.863Z",
 "updatedAt": "2020-10-13T13:57:36.466Z",
@@ -461,5 +461,5 @@ posts:
 
 
 <!-- http://localhost:3000/api/users/register --  {"name":"SomeName","email":"some@email.com","username":"someUsername","password":"12345","rePassword":"12345"} -->
-<!--http://localhost:3000/api/themes -- {"themeName":"Some Theme", "userId":"5f85bf709a517d36f4abe656", "post": "Some Post" } -->
+<!--http://localhost:3000/api/themes -- {"title":"Some Theme", "userId":"5f85bf709a517d36f4abe656", "post": "Some Post" } -->
 <!-- http://localhost:3000/api/themes/5f858dd2d895ad23602db9d4  -- {"userId":"5f8580d25d1da62568dd38fd", "postText": "Some Post textsdfasdf" } -->
