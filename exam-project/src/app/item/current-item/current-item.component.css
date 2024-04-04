@@ -12,6 +12,7 @@ h1{
     background-image:url('../../../assets/bgrnd.jpg');
     background-repeat: no-repeat;
     background-position:center;
+    height: 800px;
 }
 
 .container2{

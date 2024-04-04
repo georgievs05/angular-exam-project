@@ -4,6 +4,7 @@ import { Observable, catchError } from "rxjs";
 import { environment } from "src/environments/environment.development";
 import { SmthWentWrongService } from "./smth-went-wrong/smth-went-wrong.service";
 import { Router } from "@angular/router";
+import { UserService } from "./user/user.service";
 
 const {apiUrl} = environment
 
@@ -11,7 +12,7 @@ const {apiUrl} = environment
 export class AppInterceptor implements HttpInterceptor{
 
 
-    constructor(private smthWentWrongService: SmthWentWrongService, private router: Router ){}
+    constructor(private smthWentWrongService: SmthWentWrongService, private router: Router, private userService:UserService ){}
 
 
 
@@ -30,8 +31,7 @@ export class AppInterceptor implements HttpInterceptor{
                
                 
                 if(err.status === 401){
-                    this.smthWentWrongService.setError(err);
-                    this.router.navigate(['/smthwentwrong'])                
+                    this.userService.setError(err) 
                 }else{
                 this.smthWentWrongService.setError(err);
                 this.router.navigate(['/smthwentwrong'])

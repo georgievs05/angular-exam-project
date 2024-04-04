@@ -10,12 +10,15 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent {
 
+  message='';
   constructor(private userService: UserService, private router:Router){
-
   }
 
   login(form:NgForm){
-    console.log(form.value)
+    this.userService.apiError$.subscribe((err:any)=>{
+      this.message = err?.message  || ''
+    })
+    
     if(form.invalid){
       return
     }

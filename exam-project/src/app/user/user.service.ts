@@ -50,11 +50,25 @@ export class UserService implements OnDestroy{
 
   }
 
+
   getProfile(){
     return this.http.get<UserForAuth>('/api/users/profile').pipe(tap((user) => this.user$$.next(user)))
   }
 
+  private apiError$$ = new BehaviorSubject(null)
+  public apiError$ = this.apiError$$.asObservable()
+  setError(error : any):void{
+   this.apiError$$.next(error)
+  }
+  
   ngOnDestroy(): void {
     this.userSubscription.unsubscribe()
   }
+
+
+
+
+  
+
+
 }
