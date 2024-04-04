@@ -51,7 +51,7 @@ export class DeleteItemComponent {
 
  deleteItem(form: NgForm) {
     if (form.invalid) {
-      console.log('invalid')
+      
       return;
     }else{
       this.apiService.deleteItem(this.item._id.toString()).subscribe({

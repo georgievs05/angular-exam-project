@@ -4,7 +4,8 @@
     align-items: center;
     height: 100vh;
     background-image: url('https://cdn.dribbble.com/users/2704709/screenshots/8946512/media/ddf2551630678c678f269d977cbbe949.png?resize=1600x1200&vertical=center');
-    background-size: cover;
+    /* background-size: cover; */
+    background-position: top;
   }
   
   .container {

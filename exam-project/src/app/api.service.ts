@@ -22,7 +22,8 @@ export class ApiService {
 
   getItems(){
     const {apiUrl} = environment
-    return this.http.get<Theme[]>(`${apiUrl}/themes`)
+    return this.http.get<Theme[]>(`${apiUrl}/themes`).pipe(
+      map(themes => themes.reverse()));
   }
 
   getItem(id: string) {
@@ -55,7 +56,7 @@ export class ApiService {
     return this.getItems().pipe(
       map(items => {
         const loggedInUserId = userId; 
-      console.log(items)
+    
         return items.filter(item=> item.userId._id  === loggedInUserId);
       })
     );

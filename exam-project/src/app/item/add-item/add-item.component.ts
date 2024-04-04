@@ -14,7 +14,7 @@ export class AddItemComponent {
 
   addItem(form: NgForm) {
     if (form.invalid) {
-      console.log('invalid')
+  
       return;
     }else{
       const {title,text,image,price,currency} = form.value;

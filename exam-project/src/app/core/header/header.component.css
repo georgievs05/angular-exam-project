@@ -35,6 +35,7 @@ header nav  a{
     padding-top: 10px;
     padding-bottom: 10px;
     color: black;
+    cursor:pointer;
 }
 
 header nav  a:hover{

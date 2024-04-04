@@ -16,7 +16,7 @@ export class ListingsComponent implements OnInit {
   ngOnInit(): void {
 
     this.api.getItems().subscribe(items =>{
-      console.log(items)
+     
       this.items = items;
     })
 

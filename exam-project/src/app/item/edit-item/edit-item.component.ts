@@ -45,7 +45,7 @@ export class EditItemComponent{
   
       this.activeRoute.params.subscribe((data) => {
         const id = data['itemId'];
-        console.log(id)
+        
   
         this.apiService.getItem(id).subscribe((item) => {
           this.itemUserId = (item?.userId).toString();
@@ -65,7 +65,7 @@ export class EditItemComponent{
 
   editItem(form: NgForm) {
     if (form.invalid) {
-      console.log('invalid')
+  
       return;
     }else{
       const {title,text,image,price,currency} = form.value;

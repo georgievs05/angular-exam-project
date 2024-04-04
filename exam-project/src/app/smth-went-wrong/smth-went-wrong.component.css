@@ -39,5 +39,10 @@ a{
     margin-top: 60px;
     padding: 10px 10px 10px 10px;
     border-radius: 15px;
-    
+}
+
+a:hover{
+    background-color: black;
+    color: rgb(216, 187, 84);
+    font-size: 30px;
 }

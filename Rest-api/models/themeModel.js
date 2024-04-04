@@ -22,6 +22,10 @@ const themeSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    phoneNumber:{
+        type: String,
+        required: true
+    },
     subscribers: [{
         type: ObjectId,
         ref: "User"

@@ -25,7 +25,7 @@ export class ProfileComponent implements OnInit{
   ngOnInit(): void {
     const { username, tel, email, _id } = this.userService.user!;
 
-    console.log(this.userService.user)
+   
     this.profileDetails = {
       username,
       tel,
@@ -34,7 +34,7 @@ export class ProfileComponent implements OnInit{
     };
 
     this.apiService.getItemsForLoggedInUser(_id).subscribe(items =>{
-      console.log(items)
+      
       this.items = items;
     })
 

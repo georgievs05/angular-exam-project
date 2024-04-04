@@ -12,14 +12,18 @@
         <div class="container3">
             <p>{{item.text}}</p>
         
-            <p>Price: {{item.price}} {{item.currency}}</p>
+           
+                <p>Price: {{item.price}} {{item.currency}} <br>Contact: {{item.phoneNumber}}</p>
+               
+            
+            
         </div>
 
     </div>
 
     <div *ngIf="UserId == itemUserId" class="container4">
-        <a routerLink="/listings/{{item._id}}/edit">Edit</a>
-        <a routerLink="/listings/{{item._id}}/delete">Delete</a>
+        <a class="edit" routerLink="/listings/{{item._id}}/edit">Edit</a>
+        <a class="delete" routerLink="/listings/{{item._id}}/delete">Delete</a>
     </div>
     
 

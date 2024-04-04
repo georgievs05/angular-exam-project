@@ -22,7 +22,6 @@ h1{
 }
 
 .container4 a{
-    background-color: orange;
     margin-bottom: 100px;
     margin-right: 50px;
     text-decoration: none;
@@ -56,4 +55,21 @@ p{
 .image{
     height: 430px;
     border-radius: 15px
+}
+
+.edit{
+background-color: black;
+color: white;
+}
+.edit:hover{
+background-color: white;
+color: black;
+}
+.delete{
+    background-color: rgb(103, 5, 5);
+    color: white;
+}
+.delete:hover{
+    background-color: white;
+    color:  rgb(103, 5, 5);
 }

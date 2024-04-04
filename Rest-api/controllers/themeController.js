@@ -23,10 +23,11 @@ function getTheme(req, res, next) {
 }
 
 function createTheme(req, res, next) {
-    const { title, text,image,price,currency } = req.body;
-    const { _id: userId } = req.user;
+    const { _id: userId , tel:phoneNumber} = req.user;
+    const { title, text,image,price,currency,} = req.body;
+    
 
-    themeModel.create({ title,text,image,price,currency, userId, subscribers: [userId] })
+    themeModel.create({ title,text,image,price,currency,phoneNumber, userId, subscribers: [userId] })
         // .then(theme => {
         //     newPost(postText, userId, theme._id)
         //         .then(([_, updatedTheme]) => res.status(200).json(updatedTheme))

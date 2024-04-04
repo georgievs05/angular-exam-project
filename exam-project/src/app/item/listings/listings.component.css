@@ -1,6 +1,10 @@
 .container{
     display: block;
-
+    background-image:url('../../../assets/bgrnd.jpg');
+    background-repeat: no-repeat;
+    background-position:center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .container h1{
@@ -51,6 +55,13 @@ section div img{
     margin-right: 20px;
     margin-top: 20px;
     border-radius: 15px;
+    padding: 10px 10px 10px 10px;
+}
+
+.listings section div a:hover{
+    background-color: rgb(255, 255, 255);
+    color:rgb(216, 187, 84);
+    font-size: 25px;
 }
 
 section h2{

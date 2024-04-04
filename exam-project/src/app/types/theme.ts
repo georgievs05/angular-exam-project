@@ -10,6 +10,7 @@ export interface Theme{
         image:string,
         price:string,
         currency:string,
+        phoneNumber:string,
         userId: User,
         created_at:string,
         updatedAt:string,

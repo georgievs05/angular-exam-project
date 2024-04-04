@@ -1,8 +1,17 @@
+.background{
+  background-image: url('../../../assets/vecteezy_abstract-shapes-and-line-in-nude-pastel-colors-neutral_8169402.jpg');
+  background-repeat: no-repeat;
+  background-position:center;
+
+}
+
 .container {
     max-width: 800px;
     margin: auto;
     padding: 20px;
+    
 }
+
   
   /* Styles for profile section */
   .profile {
@@ -68,4 +77,10 @@
     background-color: rgb(65, 65, 65);
     color: rgb(216, 187, 84);
     border-radius: 15px;
+    padding: 10px 10px 10px 10px;
+    cursor: pointer;
+}
+
+.listings section div a:hover{
+  background-color: white;
 }
