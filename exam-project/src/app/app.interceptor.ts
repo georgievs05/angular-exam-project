@@ -31,7 +31,14 @@ export class AppInterceptor implements HttpInterceptor{
                
                 
                 if(err.status === 401){
-                    this.userService.setError(err) 
+                    if(req.url.startsWith('http://localhost:3000/api/login')){
+                        this.userService.setError(err) 
+                    }else{
+                        this.smthWentWrongService.setError(err);
+                        this.router.navigate(['/smthwentwrong'])
+                    }
+                    
+                    
                 }else{
                 this.smthWentWrongService.setError(err);
                 this.router.navigate(['/smthwentwrong'])
