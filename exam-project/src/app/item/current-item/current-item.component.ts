@@ -13,12 +13,6 @@ import { UserService } from 'src/app/user/user.service';
 export class CurrentItemComponent {
   item = {} as Theme;
    
-  // profileDetails: ProfileDetails = {
-  //   username: '',
-  //   tel: '',
-  //   email: '',
-  //   _id:''
-  // };
 
   UserId:string=''
 
