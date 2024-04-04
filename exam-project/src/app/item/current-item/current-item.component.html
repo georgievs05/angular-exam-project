@@ -17,7 +17,7 @@
 
     </div>
 
-    <div *ngIf="profileDetails?._id == itemUserId" class="container4">
+    <div *ngIf="UserId == itemUserId" class="container4">
         <a routerLink="/listings/{{item._id}}/edit">Edit</a>
         <a routerLink="/listings/{{item._id}}/delete">Delete</a>
     </div>

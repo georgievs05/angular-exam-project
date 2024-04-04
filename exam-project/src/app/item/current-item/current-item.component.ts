@@ -13,12 +13,14 @@ import { UserService } from 'src/app/user/user.service';
 export class CurrentItemComponent {
   item = {} as Theme;
    
-  profileDetails: ProfileDetails = {
-    username: '',
-    tel: '',
-    email: '',
-    _id:''
-  };
+  // profileDetails: ProfileDetails = {
+  //   username: '',
+  //   tel: '',
+  //   email: '',
+  //   _id:''
+  // };
+
+  UserId:string=''
 
   itemUserId:string=''
   
@@ -30,14 +32,14 @@ export class CurrentItemComponent {
   ) {}
 
   ngOnInit(): void {
-    const { username, tel, email, _id } = this.userService.user!;
 
-    this.profileDetails = {
-      username,
-      tel,
-      email,
-      _id
-    };
+    try {
+      const { _id } = this?.userService?.user!;
+    this.UserId = _id
+    } catch (err) {
+      this.UserId=''
+    }
+    
 
     this.activeRoute.params.subscribe((data) => {
       const id = data['itemId'];

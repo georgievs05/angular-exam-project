@@ -10,11 +10,11 @@
     <div class="nav">
 
     <nav>
-        <a routerLink="/home">Home</a>
+        <a routerLink="/home">Home</a>  <a routerLink="/listings">View listings</a>
     </nav>
 
     <nav *ngIf="isLoggedIn" >
-        <a routerLink="/listings">View listings</a>
+      
         <a routerLink="/add-item">Add item</a>
         <a routerLink="/profile">{{username}}'sProfile</a>
         <a (click)="logout()">Logout</a>
