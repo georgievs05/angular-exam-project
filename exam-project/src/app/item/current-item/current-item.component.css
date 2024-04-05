@@ -12,7 +12,7 @@ h1{
     background-image:url('../../../assets/bgrnd.jpg');
     background-repeat: no-repeat;
     background-position:center;
-    height: 800px;
+    height: 980px;
 }
 
 .container2{
@@ -36,7 +36,11 @@ h1{
     flex-direction: row;
 }
 
-
+.container h1{
+background-color:rgb(216, 187, 84);
+padding: 10px 10px 10px 10px ;
+border-radius: 15px;
+}
 p{
     max-width: 600px;
     margin-bottom: 60px;

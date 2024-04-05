@@ -3,6 +3,10 @@
 
     <h1>Listings</h1>
 
+    <div *ngIf="items?.length==0">
+        <h1 class="noitems" >There are still no listings added</h1>
+
+    </div>
 
     <div class="listings">
         <section *ngFor="let item of items">

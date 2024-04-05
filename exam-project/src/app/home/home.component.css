@@ -184,3 +184,17 @@ section div img{
 .price{
     font-size: 25px;
 }
+
+.noitems{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    background-color:rgb(216, 187, 84) ;
+    padding: 10px 10px 10px 10px ;
+    color: black;
+    margin-top: 40px;
+    margin-bottom: 70px;
+    margin-left: 500px;
+    margin-right: 500px;
+    border-radius: 15px;
+}

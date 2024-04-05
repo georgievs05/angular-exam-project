@@ -5,14 +5,17 @@
     background-position:center;
     background-size: cover;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 700px;
 }
 
 .container h1{
     text-align: center;
-    margin: 20px 20px 20px 20px;
-
+    margin: 20px 500px 20px 500px;
+    background-color:rgb(216, 187, 84) ;
+    padding: 10px 10px 10px 10px;
+    border-radius: 15px;
 }
+
 
 .listings{
     display: grid;
@@ -76,3 +79,5 @@ p{
 .price{
     font-size: 25px;
 }
+
+
