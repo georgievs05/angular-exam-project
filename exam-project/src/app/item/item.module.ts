@@ -4,9 +4,10 @@ import { CurrentItemComponent } from './current-item/current-item.component';
 import { ItemRoutingModule } from './item-routing.module';
 import { ListingsComponent } from './listings/listings.component';
 import { AddItemComponent } from './add-item/add-item.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditItemComponent } from './edit-item/edit-item.component';
 import { DeleteItemComponent } from './delete-item/delete-item.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -19,7 +20,7 @@ import { DeleteItemComponent } from './delete-item/delete-item.component';
     DeleteItemComponent,
   ],
   imports: [
-    CommonModule,ItemRoutingModule,FormsModule
+    CommonModule,ItemRoutingModule,FormsModule,SharedModule,ReactiveFormsModule
   ]
 })
 export class ItemModule { }

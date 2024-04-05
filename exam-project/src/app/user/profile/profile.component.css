@@ -2,6 +2,7 @@
   background-image: url('../../../assets/vecteezy_abstract-shapes-and-line-in-nude-pastel-colors-neutral_8169402.jpg');
   background-repeat: no-repeat;
   background-position:center;
+  background-size: cover;
 
 }
 
@@ -38,10 +39,10 @@
   
   .listings{
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Four columns with equal width */
+    grid-template-columns: repeat(3, 1fr); /* Four columns with equal width */
     gap: 30px; 
     margin: 20px 20px 80px 20px;
-    
+    text-align: center;
 }
 
 .listings section{
@@ -51,11 +52,10 @@
     justify-content:space-between;
     padding: 20px 20px 20px 20px;
     border-radius: 15px;
-    max-width: 500px;
-    max-height: 500px;
+    width: 200px;
 }
 .listings img {
-    max-width: 50%; /* Limit the size of the image */
+    max-width: 70%; /* Limit the size of the image */
     height: auto;
     border-radius: 15px;
   }
@@ -83,4 +83,81 @@
 
 .listings section div a:hover{
   background-color: white;
+}
+
+.imgborder{
+  background-color: rgb(216, 187, 84);
+  padding: 15px 18px 5px 0px ;
+  border-radius: 15px;
+}
+
+
+.username, .email, .tel {
+  margin-bottom: 20px;
+}
+
+.username label, .email label, .tel label {
+  display: block;
+  font-weight: bold;
+}
+
+.username input, .email input, .tel input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+.actions {
+  margin-top: 20px;
+}
+
+.red-button, .green-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.red-button {
+  background-color: #ff5858;
+  color: white;
+  text-align: center;
+}
+
+.green-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.green-button:disabled{
+  background-color: gray;
+  text-align: center;
+}
+
+.edit-button{
+  padding: 10px 10px 10px 10px;
+  font-size: 18px;
+  text-decoration: none;
+  background-color: rgb(216, 187, 84);
+  border-radius: 15px;
+}
+
+.editform{
+  margin-top: 20px;
+  background-color:rgb(216, 187, 84);
+  padding: 15px 15px 15px 15px;
+  border-radius: 15px;
+  align-items: center;
+}
+
+.buttons{
+  display: flex;
+  justify-content:space-around;
 }

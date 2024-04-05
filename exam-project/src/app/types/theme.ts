@@ -17,3 +17,11 @@ export interface Theme{
         __v: number;
     
 }
+
+export interface itemDetails{
+        title:string ;
+        text:string;
+        image:string;
+        price:string;
+        currency:string
+ }

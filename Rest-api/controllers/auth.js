@@ -1,6 +1,7 @@
 const {
     userModel,
-    tokenBlacklistModel
+    tokenBlacklistModel,
+    themeModel
 } = require('../models');
 
 const utils = require('../utils');
@@ -93,13 +94,37 @@ function getProfileInfo(req, res, next) {
 }
 
 function editProfileInfo(req, res, next) {
+    const { themeId } = req.params;
     const { _id: userId } = req.user;
     const { tel, username, email } = req.body;
 
-    userModel.findOneAndUpdate({ _id: userId }, { tel, username, email }, { runValidators: true, new: true })
-        .then(x => { res.status(200).json(x) })
+    // themeModel.updateMany({ userId },{phoneNumber:tel}, { new: true })
+    //         .then(x => { res.status(200).json(x) })
+    //         .catch(next);
+
+    // userModel.findOneAndUpdate({ _id: userId }, { tel, username, email }, { runValidators: true, new: true })
+    //     .then(x => { 
+    //         res.status(200).json(x)
+            
+    //     })
+    //     .catch(next);
+
+    themeModel.updateMany({ userId: userId }, { phoneNumber: tel })
+        .then(() => {
+            // Find and update the user model
+            return userModel.findOneAndUpdate(
+                { _id: userId },
+                { tel, username, email },
+                { runValidators: true, new: true }
+            );
+        })
+        .then(user => {
+            res.status(200).json(user);
+        })
         .catch(next);
 }
+
+
 
 module.exports = {
     login,

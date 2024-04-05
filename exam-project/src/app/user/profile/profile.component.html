@@ -15,11 +15,86 @@
         <p>Phone Number:  {{profileDetails.tel}}</p> 
     </div>
     
-    <div>
-        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="">
+    <div class="imgborder">
+        <img src="https://i.pinimg.com/736x/b2/ea/a0/b2eaa0d4918d54021f9c7aa3fc3d3cf3.jpg" alt="">
     </div>
   </div>
 
+  <button class="edit-button" (click)="onToggle()">Edit profile</button>
+  <ng-container *ngIf="showEditMode">
+    <form class="editform" [formGroup]="form" (ngSubmit)="saveProfileHandle()">
+      <div class="username">
+        <p>Username:</p>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          [value]="profileDetails.username"
+          formControlName="username"
+        />
+      </div>
+
+      <ng-container *ngIf="form.get('username')?.touched">
+        <p class="error" *ngIf="form.get('username')?.errors?.['required']">
+          Username is required!
+        </p>
+        <p class="error" *ngIf="form.get('username')?.errors?.['minlength']">
+          Username must have at least 5 characters!
+        </p>
+      </ng-container>
+
+      
+      <div class="email">
+        <p>Email:</p>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          [value]="profileDetails.email"
+          formControlName="email"
+        />
+      </div>
+
+      
+      <ng-container *ngIf="form.get('email')?.touched">
+        <p class="error" *ngIf="form.get('email')?.errors?.['required']">
+          Email is required!
+        </p>
+        <p
+          class="error"
+          *ngIf="form.get('email')?.errors?.['emailValidator']"
+        >
+          Email is not valid!
+        </p>
+      </ng-container>
+
+      
+      <div class="tel">
+        <p>Phone:</p>
+        <div>
+          
+          <input
+            type="text"
+            name="tel"
+            id="tel"
+            [value]="profileDetails.tel"
+            formControlName="tel"
+          />
+        </div>
+      </div>
+
+      <div class="buttons">
+
+        <button class="red-button" (click)="onCancel($event)">Cancel</button>
+        <button class="green-button" [disabled]="form.invalid"> Save </button>
+      </div>
+      
+    </form>
+  </ng-container>
+
+
+
+  
   <div class="container2">
 
     <h1 *ngIf="items?.length==0; else hasitems">You still don't have items listed!</h1>
@@ -35,12 +110,12 @@
 
                 <img src={{item.image}} alt="">
             </div>
-            
+
 
             <div>
                 <a routerLink="/listings/{{item._id}}" >View</a>
 
-                <p>Price:{{item.price}} {{item.currency}}</p>
+              
             </div>
             
 
