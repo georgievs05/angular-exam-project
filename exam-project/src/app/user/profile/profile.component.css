@@ -2,8 +2,8 @@
   background-image: url('../../../assets/vecteezy_abstract-shapes-and-line-in-nude-pastel-colors-neutral_8169402.jpg');
   background-repeat: no-repeat;
   background-position:center;
-  background-size: cover;
-
+  background-size:cover;
+  padding-bottom: 160px;
 }
 
 .container {
